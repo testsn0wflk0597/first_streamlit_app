@@ -46,7 +46,7 @@ streamlit.header("The fruit list contains:")
 streamlit.dataframe(my_data_rows)
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','')
-if add_my_fruit == '':
+if add_my_fruit.strip() == '':
    picked_fruit = '' 
 else:
   picked_fruit = 'Thanks for adding '

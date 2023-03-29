@@ -52,3 +52,4 @@ else:
   picked_fruit = 'Thanks for adding '
 streamlit.write(picked_fruit,add_my_fruit)
 
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")

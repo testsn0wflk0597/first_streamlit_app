@@ -6,6 +6,11 @@ from urllib.error import URLError
 
 streamlit.title('Testing with Python')
 
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cur = my_cnx.cursor()
+my_cur.execute("SELECT * FROM fruit_load_list values")
+
+
 streamlit.stop()
 
 streamlit.title('My Parents New Healther Diner')

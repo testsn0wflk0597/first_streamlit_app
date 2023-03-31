@@ -6,7 +6,7 @@ from urllib.error import URLError
 
 streamlit.title('Testing with Python')
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["GARDEN_VEGGIES"])
+my_cnx = snowflake.connector.connect(**streamlit.secrets["garden_veggies"])
 my_cur = my_cnx.cursor()
 query_result = my_cur.execute("SELECT * FROM GARDEN_PLANTS.VEGGIES.VEGETABLE_DETAILS")
 streamlit.dataframe(query_result)
